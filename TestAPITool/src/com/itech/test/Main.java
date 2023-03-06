@@ -15,8 +15,8 @@ public class Main {
      *    API.post("https://wwww.example.com", body).then((r)->r).exception((e)->e);
      * </code>
      * <br>
-     * <p style="color: darkgray;">
-     * 		NOTE: You can see log file in ~/user-home/itechapi/log/applog.log
+     * <p>
+     * 		NOTE: You can see log file in <b>~/user-home/itechapi/log/applog.log</b>
      * </p>
      */
     static API API = new API();
