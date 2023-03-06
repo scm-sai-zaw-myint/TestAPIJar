@@ -1,5 +1,5 @@
 # TestAPIJar
-Example testing for API.jar which is a tool to easily call external api in java.
+Example of testing for API.jar which is a tool to easily call external api in java.
 Download JAR here: https://drive.google.com/file/d/10ZqBt69pwFJ12BAdUgtJQnnCkzMuIZrB/view?usp=sharing
 
 ## Project set up
