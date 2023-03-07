@@ -32,10 +32,11 @@ public class TestPOSTRequest {
     }
     
     static void testWithPOJO(String accessToken) {
-        CommentRequest category = new CommentRequest();
-        category.setBody("Comment to post using api!");
+        CommentRequest comment = new CommentRequest();
+        comment.setBody("Comment to post using api!");
         //we are passing authorization header to request!
-        api.post(DATA.URL.getUrl().concat("/1/comments"), category, "Content-Type","application/json","Authorization", "Bearer ".concat(accessToken))
+        assert accessToken != null : "Access token is null!";
+        api.post(DATA.URL.getUrl().concat("/1/comments"), comment, "Content-Type","application/json","Authorization", "Bearer ".concat(accessToken))
         .then((response)->{
             System.out.println(response);
             return response;

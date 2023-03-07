@@ -9,7 +9,7 @@ import com.itech.api.v1.tools.API;
 
 public class Constant {
     
-    static String accessToken;
+    static String accessToken = "";
 
     @SuppressWarnings("unchecked")
     static Map<?, ?> convertJSON(String json)
@@ -31,13 +31,14 @@ public class Constant {
         API api = new API();
         api.post(DATA.URL.getUrl().concat("/auth/request/login"), credential)
         .then((r)->{
+            System.out.println(r);
             Map<String, Object> outerData = (Map<String, Object>) Constant.convertJSON(r.getData().toString());
             Map<String, Object> result = (Map<String, Object>) outerData.get("data");
             accessToken = (String) result.get("accessToken");
             return r;
         })
         .exception((e)->{
-            e.getException();
+            e.getException().printStackTrace();
             return e;
         });
         return accessToken;
